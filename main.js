@@ -48,9 +48,9 @@ room.register(rose)
 
 
 const sendMessages = (from, to) => {
-    if(from === jack || to === rose) {
+    if(from === jack && to === rose) {
         return jack.send('hello, i love you!', rose)
-    } else if(from === rose || to === billy) {
+    } else if(from === rose && to === billy) {
         let roseToBilly = rose.send('i love you Billy', billy)
         let billytoAll = billy.send('i can RUN!')
     }
